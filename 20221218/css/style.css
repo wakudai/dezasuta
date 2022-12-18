@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+ul {
+    list-style: none;
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li {
+    padding: 0 20px;
+    background-color: gray;
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.wrap div {
+    width: 30%;
+    height: 300px;
+    margin: 20px 0;
+    background: red;
+    color: #fff;
+    text-align: center;
+    line-height: 300px;
+}
+
+@media screen and (max-width : 767px) {
+    .wrap {
+        display: block;
+    }
+
+    .wrap div {
+        width: 100%;
+    }
+}
