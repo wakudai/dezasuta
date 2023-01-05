@@ -40,7 +40,7 @@ img {
 
 /* ここから課題用のcss */
 
-.service__wrap {
+.service {
     max-width: 960px;
     margin: 0 auto;
     padding: 80px 32px;
@@ -48,7 +48,7 @@ img {
     background: #eeeeee;
 }
 
-.service__wrap h1 {
+.service h1 {
     margin-bottom: 80px;
     text-align: center;
     color: #0f8d76;
@@ -68,7 +68,7 @@ img {
     width: 100%;
 }
 
-.text__box {
+.service__item {
     background-color: #fff;
     padding: 8px;
 }
@@ -87,11 +87,11 @@ img {
 }
 
 @media screen and (max-width:400px) {
-    .service__wrap {
+    .service {
         padding: 40px 10px;
     }
 
-    .service__wrap h1 {
+    .service h1 {
         font-size: 24px;
         margin-bottom: 40px;
     }
@@ -104,7 +104,7 @@ img {
         margin-bottom: 20px;
     }
 
-    .text__box {
+    .service__item {
         padding: 8px 16px;
     }
 
