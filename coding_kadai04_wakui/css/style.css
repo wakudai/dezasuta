@@ -1,0 +1,329 @@
+@charset "utf-8";
+
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: #4F260B;
+    font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+
+/* ヘッダー */
+
+.header__wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 7% 0 3%;
+}
+
+.header__logo {
+    width: 226px;
+}
+
+.pcNav ul {
+    display: flex;
+}
+.pcNav ul li {
+    width: 105px;
+    margin-left: 55px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    text-align: center;
+}
+
+
+/* ----------------
+メイン　ここから
+--------------------*/
+
+main {
+    background: #E8D9BF;
+}
+
+/* 各コンテンツの横幅 */
+
+.catch,
+.about,
+.menu,
+.event {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* キャッチ */
+
+.catch {
+    padding: 100px 0 50px 0;
+}
+
+.catch p {
+    text-align: center;
+}
+
+.headline-copy {
+    font-size: 30px;
+    margin-bottom: 48px;
+}
+
+.catch-copy {
+    font-size: 82px;
+    line-height: 1.17;
+    margin-bottom: 20px;
+}
+
+.body-copy {
+    font-size: 23px;
+    line-height: 1.65;
+}
+
+/* ABOUT US */
+
+.about {
+    padding: 50px 0 40px 0;
+}
+
+.about__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about__img {
+    width: 50%;
+}
+
+.about__img img {
+    border-radius: 0 0 82px 0;
+}
+
+.about__textBox {
+    width: 42%;
+}
+
+.about__ttl {
+    width: 65%;
+    margin: 0 0 50px 0;
+}
+
+.about__catch {
+    font-size: 44px;
+    line-height: 1.38;
+    margin-bottom: 20px;
+}
+
+.about__text {
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+
+/* menu */
+
+.menu {
+    padding: 40px 0;
+}
+
+.menu__ttl {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.menu__ttl img {
+    width: 15%;
+}
+
+.menu__wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu__imgBox {
+    width: 300px;
+}
+
+.menu__imgBox img {
+    border-radius: 0 40px 0 0;
+}
+
+.cont__headline {
+    font-size: 38px;
+    color: #d30202;
+    margin: -15px 0 25px 14px;
+}
+
+.menu__text {
+    font-size: 17px;
+    line-height: 1.23;
+}
+
+/* gallery */
+
+.gallery {
+    padding: 40px 0 30px 0;
+}
+
+.gallery__ttl {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery__ttl img {
+    width: 19%;
+}
+
+.gallery__wrap {
+    display: flex;
+}
+
+
+/* EVENT */
+
+.event {
+    padding: 30px 0 30px 0;
+}
+
+.event__ttl {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.event__ttl img {
+    width: 17%;
+}
+
+.event__list {
+    padding: 40px 100px;
+    background-color: #fff;
+    border: solid 3.6px #4F260B;
+}
+
+.event__item {
+    margin-bottom: 27px;
+    font-size: 23px;
+}
+
+.event__item:last-child {
+    margin-bottom: 0;
+}
+
+.event__detail {
+    margin-left: 55px;
+    border-bottom: solid 1px #4F260B;
+}
+
+/* ACCESS */
+
+.access {
+    padding-top: 30px;
+}
+
+.access__ttl {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.access__ttl img {
+    width: 17%;
+}
+
+.access iframe {
+    width: 100%;
+    height: 471px;
+    vertical-align: bottom;
+}
+
+/* ----------------
+メイン　ここまで
+--------------------*/
+
+/* ----------------
+フッター　ここから
+--------------------*/
+
+.footer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+
+.footer__wrap {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 70px;
+}
+
+.footer__logo {
+    width: 226px;
+    margin-right: 60px;
+}
+
+.footer__item {
+    font-size: 20px;
+    line-height: 1.95;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 16px;
+}
+
+/* ----------------
+フッター　ここまで
+--------------------*/
+
+/* ページのトップに戻るボタン */
+.to__top {
+    position: fixed;
+    z-index: 9999;
+    bottom: 40px;
+    right: 40px;
+    width: 125px;
+}
