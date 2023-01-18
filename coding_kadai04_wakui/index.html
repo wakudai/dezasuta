@@ -30,9 +30,9 @@
     </header>
     <main>
         <div class="catch">
-            <p class="headline-copy">Have a happy day From a cup of coffee.</p>
-            <p class="catch-copy">ハッピーに溢れる1日を<br>1杯のコーヒーから。</p>
-            <p class="body-copy">毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</p>
+            <p class="catch__headline">Have a happy day From a cup of coffee.</p>
+            <p class="catch__copy">ハッピーに溢れる1日を<br>1杯のコーヒーから。</p>
+            <p class="catch__body">毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</p>
         </div>
         <section class="about" id="about">
             <div class="about__wrap">
@@ -53,17 +53,17 @@
             <div class="menu__wrap">
                 <div class="menu__imgBox">
                     <img src="./images/pc_menu_drink-100.jpg" alt="Drink">
-                    <h3 class="cont__headline">Drink</h3>
+                    <h3 class="menu__headline">Drink</h3>
                     <p class="menu__text">ドリンクメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
                 </div>
                 <div class="menu__imgBox">
                     <img src="./images/pc_menu_food-100.jpg" alt="Food">
-                    <h3 class="cont__headline">Food</h3>
+                    <h3 class="menu__headline">Food</h3>
                     <p class="menu__text">フードメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
                 </div>
                 <div class="menu__imgBox">
                     <img src="./images/pc_menu_sweets-100.jpg" alt="Sweets">
-                    <h3 class="cont__headline">Sweets</h3>
+                    <h3 class="menu__headline">Sweets</h3>
                     <p class="menu__text">スイーツメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
                 </div>
             </div>
@@ -71,27 +71,37 @@
         <section class="gallery" id="gallery">
             <h2 class="gallery__ttl"><img src="./images/gallery@2x.png" alt="GALLERY"></h2>
             <div class="gallery__wrap">
-                <img src="./images/pc_gallary_01-100.jpg" alt="">
-                <img src="./images/pc_gallary_02-100.jpg" alt="">
-                <img src="./images/pc_gallary_03-100.jpg" alt="">
-                <img src="./images/pc_gallary_04-100.jpg" alt="">
-                <img src="./images/pc_gallary_05-100.jpg" alt="">
+                <div class="gallery__img">
+                    <img src="./images/pc_gallary_01-100.jpg" alt="カフェオレの写真">
+                </div>
+                <div class="gallery__img">
+                    <img src="./images/pc_gallary_02-100.jpg" alt="看板の写真">
+                </div>
+                <div class="gallery__img">
+                    <img src="./images/pc_gallary_03-100.jpg" alt="店内の様子">
+                </div>
+                <div class="gallery__img">
+                    <img src="./images/pc_gallary_04-100.jpg" alt="コーヒー豆の写真">
+                </div>
+                <div class="gallery__img">
+                    <img src="./images/pc_gallary_05-100.jpg" alt="店内の様子">
+                </div>
             </div>
         </section>
         <section class="event" id="event">
             <h2 class="event__ttl"><img src="./images/event@2x.png" alt="EVENT"></h2>
             <ul class="event__list">
                 <li class="event__item">
-                    2020.06.23
-                    <span class="event__detail">7月はイベント出店のため0/0お休みします</span>
+                    <time datetime="2020-06-23">2020.06.23</time>
+                    <a href="/" class="event__detail">7月はイベント出店のため0/0お休みします</a>
                 </li>
                 <li class="event__item">
-                    2020.03.15
-                    <span class="event__detail">春の新商品新発売。話題のあのブランドとコラボ</span>
+                    <time datetime="2020-03-15">2020.03.15</time>
+                    <a href="/" class="event__detail">春の新商品新発売。話題のあのブランドとコラボ</a>
                 </li>
                 <li class="event__item">
-                    2020.02.06
-                    <span class="event__detail">コーヒーの日で30%OFFイベントを開催[3日間限定]</span>
+                    <time datetime="2020-02-06">2020.02.06</time>
+                    <a href="/" class="event__detail">コーヒーの日で30%OFFイベントを開催[3日間限定]</a>
                 </li>
             </ul>
         </section>
@@ -117,9 +127,9 @@
                 <li class="footer__item">MAIL:info@designcafe.tokyo</li>
             </ul>
         </div>
-        <p class="copyright">&copy;2021 DESIGN CAFE</p>
+        <p class="footer__copy">&copy;2021 DESIGN CAFE</p>
     </footer>
-    <div class="to__top">
+    <div class="pagetop">
         <a href="#header"><img src="./images/to_top@2x.png" alt="トップへ戻る"></a>
     </div>
 </body>
