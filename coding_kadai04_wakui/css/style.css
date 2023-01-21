@@ -172,13 +172,9 @@ main {
 }
 
 .menu__ttl {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.menu__ttl img {
     width: 15%;
+    text-align: center;
+    margin: 0 auto 30px;
 }
 
 .menu__wrap {
@@ -213,13 +209,10 @@ main {
 }
 
 .gallery__ttl {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.gallery__ttl img {
     width: 19%;
+    max-width: 245px;
+    text-align: center;
+    margin: 0 auto 20px;
 }
 
 .gallery__wrap {
@@ -234,13 +227,9 @@ main {
 }
 
 .event__ttl {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.event__ttl img {
     width: 17%;
+    text-align: center;
+    margin: 0 auto 30px;
 }
 
 .event__list {
@@ -270,13 +259,10 @@ main {
 }
 
 .access__ttl {
-    width: 100%;
+    width: 11%;
+    max-width: 214px;
     text-align: center;
-    margin-bottom: 40px;
-}
-
-.access__ttl img {
-    width: 17%;
+    margin: 0 auto 40px;
 }
 
 .access iframe {
