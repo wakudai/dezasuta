@@ -8,16 +8,30 @@
     <title>デザインカフェ</title>
     <meta name="description" content="デザインのカフェサイトです。">
     <link rel="stylesheet" href="/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 
 <body>
     <header class="header" id="header">
         <div class="header__slider">
-            <div><img src="/images/pc_first-100.jpg" alt="店内の様子"></div>
+            <picture>
+                <source srcset="images/sp_main_vs@2x-100.jpg" media="(max-width: 767px)">
+                <img src="./images/pc_first-100.jpg" alt="デザインカフェ　店内の様子">
+            </picture>
         </div>
         <div class="header__wrap">
             <h1 class="header__logo"><img src="/images/design_cafe_logo_header@2x.png" alt="DESIGN CAFE"></h1>
-            <nav class="pcNav">
+            <nav class="header__pc-nav">
+                <ul>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#event">EVENT</a></li>
+                    <li><a href="#access">ACCESS</a></li>
+                </ul>
+            </nav>
+            <div class="header__sp-btn"><span></span></div>
+            <nav class="header__sp-nav">
                 <ul>
                     <li><a href="#about">ABOUT US</a></li>
                     <li><a href="#menu">MENU</a></li>
@@ -32,10 +46,11 @@
         <div class="catch">
             <p class="catch__headline">Have a happy day From a cup of coffee.</p>
             <p class="catch__copy">ハッピーに溢れる1日を<br>1杯のコーヒーから。</p>
-            <p class="catch__body">毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</p>
+            <p class="catch__body">毎日を丁寧に大切に過ごしたい。<br class="spOnly">だからこそ一杯一杯丁寧にコーヒーを入れ<br>足を運んでくれるお客さんには落ち着く空間と<br
+                    class="spOnly">こだわりのコーヒーを提供したい。</p>
         </div>
         <section class="about" id="about">
-            <div class="about__wrap">
+            <div class="about__wrap pcOnly">
                 <div class="about__img">
                     <img src="./images/pc_about-100.jpg" alt="乾杯している様子">
                 </div>
@@ -46,6 +61,16 @@
                         サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
                     </p>
                 </div>
+            </div>
+            <div class="about__wrap spOnly">
+                <h2 class="about__ttl"><img src="./images/about_us@2x.png" alt="ABOUT US"></h2>
+                <div class="about__img">
+                    <img src="/images/about_us@2x-100.jpg" alt="乾杯している様子">
+                </div>
+                <h3 class="about__catch">私たちが提供する<br>こだわりのコーヒー</h3>
+                <p class="about__text">
+                    サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
+                </p>
             </div>
         </section>
         <section class="menu" id="menu">
@@ -90,7 +115,7 @@
         </section>
         <section class="event" id="event">
             <h2 class="event__ttl"><img src="./images/event@2x.png" alt="EVENT"></h2>
-            <ul class="event__list">
+            <ul class="event__list pcOnly">
                 <li class="event__item">
                     <time datetime="2020-06-23">2020.06.23</time>
                     <a href="/" class="event__detail">7月はイベント出店のため0/0お休みします</a>
@@ -102,6 +127,20 @@
                 <li class="event__item">
                     <time datetime="2020-02-06">2020.02.06</time>
                     <a href="/" class="event__detail">コーヒーの日で30%OFFイベントを開催[3日間限定]</a>
+                </li>
+            </ul>
+            <ul class="event__list spOnly">
+                <li class="event__item">
+                    <time datetime="2020-06-23">2020.06.23</time>
+                    <a href="/" class="event__detail">7月はイベント出店のため0/0・・・</a>
+                </li>
+                <li class="event__item">
+                    <time datetime="2020-03-15">2020.03.15</time>
+                    <a href="/" class="event__detail">春の新商品新発売。話題のあのブランド・・・</a>
+                </li>
+                <li class="event__item">
+                    <time datetime="2020-02-06">2020.02.06</time>
+                    <a href="/" class="event__detail">コーヒーの日で30%OFFイベントを・・・</a>
                 </li>
             </ul>
         </section>
@@ -129,9 +168,18 @@
         </div>
         <p class="footer__copy">&copy;2021 DESIGN CAFE</p>
     </footer>
-    <div class="pagetop">
+    <div class="pageTop">
         <a href="#header"><img src="./images/to_top@2x.png" alt="トップへ戻る"></a>
     </div>
+
+    <script>
+        $(function () {
+            $('.header__sp-btn, header__sp-nav li').on('click', function () {
+                $('.header__sp-btn').toggleClass('open');
+                $('.header__sp-nav').fadeToggle();
+            });
+        });
+    </script>
 </body>
 
 </html>

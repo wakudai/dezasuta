@@ -45,7 +45,9 @@ img {
 }
 
 
-/* ヘッダー */
+/* ----------------
+ヘッダー
+--------------------*/
 
 .header__wrap {
     position: absolute;
@@ -60,13 +62,13 @@ img {
 }
 
 .header__logo {
-    width: 226px;
+    width: 17%;
 }
 
-.pcNav ul {
+.header__pc-nav ul {
     display: flex;
 }
-.pcNav ul li {
+.header__pc-nav ul li {
     width: 105px;
     margin-left: 55px;
     color: #fff;
@@ -74,6 +76,11 @@ img {
     font-size: 18px;
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
     text-align: center;
+}
+
+.header__sp-nav,
+.header__sp-btn {
+    display: none;
 }
 
 
@@ -173,7 +180,6 @@ main {
 
 .menu__ttl {
     width: 15%;
-    text-align: center;
     margin: 0 auto 30px;
 }
 
@@ -209,9 +215,8 @@ main {
 }
 
 .gallery__ttl {
-    width: 19%;
+    width: 23%;
     max-width: 245px;
-    text-align: center;
     margin: 0 auto 20px;
 }
 
@@ -228,7 +233,6 @@ main {
 
 .event__ttl {
     width: 17%;
-    text-align: center;
     margin: 0 auto 30px;
 }
 
@@ -259,9 +263,8 @@ main {
 }
 
 .access__ttl {
-    width: 11%;
+    width: 19%;
     max-width: 214px;
-    text-align: center;
     margin: 0 auto 40px;
 }
 
@@ -304,10 +307,310 @@ main {
 }
 
 /* ページのトップに戻るボタン */
-.pagetop {
+.pageTop {
     position: fixed;
     z-index: 9999;
     bottom: 40px;
     right: 40px;
     width: 125px;
+}
+
+.spOnly {
+    display: none;
+}
+
+
+@media screen and (max-width: 1100px) {
+    .spOnly {
+        display: block;
+    }
+
+    .pcOnly {
+        display: none;
+    }
+
+    .header__pc-nav {
+        display: none;
+    }
+
+    /* ハンバーガー */
+    .header__sp-btn {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        height: 23px;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .header__sp-btn span {
+        display: block;
+        position: relative;
+        top: 10px;
+        width: 33px;
+        height: 3px;
+        border-radius: 2px;
+        background: #fff;
+        transition: 0.3s;
+    }
+
+    .header__sp-btn span::before,
+    .header__sp-btn span::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 33px;
+        height: 3px;
+        border-radius: 2px;
+        background: #fff;
+        transition: 0.3s;
+    }
+
+    .header__sp-btn span::before {
+        bottom: 10px;
+    }
+
+    .header__sp-btn span::after {
+        top: 10px;
+    }
+
+    /* ハンバーガを閉じる */
+    .header__sp-btn.open span {
+        background: transparent;
+    }
+
+    .header__sp-btn.open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+
+    .header__sp-btn.open span::after {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    /* ハンバーガーメニュー */
+    .header__sp-nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+    }
+
+    .header__sp-nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .header__sp-nav ul li {
+        padding: 20px 0;
+        color: #fff;
+        font-size: 18px;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    }
+
+    /* About us */
+    .about__ttl {
+        width: 25%;
+        margin: 0 auto 12px auto;
+    }
+
+    .about__img {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .about__img img {
+        border-radius: 0;
+        width: 100%;
+    }
+
+    .about__text {
+        line-height: 1.75;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* ----------------
+    ヘッダー
+    --------------------*/
+
+    .header__logo {
+        width: 55%;
+    }
+
+
+    /* ----------------
+    メイン
+    --------------------*/
+
+    /* キャッチ */
+
+    .catch {
+        padding: 40px 0 54px 0;
+    }
+
+    .catch__headline {
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+
+    .catch__copy {
+        font-size: 38px;
+        line-height: 1.15;
+        letter-spacing: 0.02em;
+        margin-bottom: 12px;
+    }
+
+    .catch__body {
+        font-size: 16px;
+        line-height: 1.88;
+        letter-spacing: 0.1em;
+    }
+
+    /* About us */
+
+    .about {
+        padding: 0 0 50px 0;
+    }
+
+    .about__ttl {
+        width: 43%;
+        margin: 0 auto 10px auto;
+    }
+
+    .about__img {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+
+    .about__img img {
+        border-radius: 0;
+    }
+
+    .about__catch,
+    .about__text {
+        padding: 0 18px;
+    }
+
+    .about__catch {
+        font-size: 36px;
+        margin-bottom: 18px;
+        line-height: 1.25;
+    }
+
+    .about__text {
+        line-height: 1.75;
+    }
+
+    /* menu */
+
+    .menu {
+        padding: 0 0 42px 0;
+    }
+
+    .menu__ttl {
+        width: 24%;
+        margin-bottom: 17px;
+    }
+
+    .menu__wrap {
+        flex-direction: column;
+    }
+
+    .menu__imgBox {
+        width: 80%;
+        margin: 0 auto 60px auto;
+    }
+
+    .menu__headline {
+        margin-bottom: 17px;
+        margin-left: 10px;
+    }
+
+    .menu__text {
+        line-height: 1.58;
+    }
+
+    /* gallery */
+
+    .gallery {
+        padding: 0 0 23px 0;
+    }
+
+    .gallery__ttl {
+        width: 38%;
+    }
+
+    /* event */
+    .event {
+        padding: 0 0 27px 0;
+    }
+
+    .event__ttl {
+        width: 27%;
+        margin-bottom: 16px;
+    }
+
+    .event__list {
+        margin: 0 18px;
+        padding: 20px 0 20px 28px;
+    }
+
+    .event__item {
+        font-size: 16px;
+    }
+
+    .event__item time {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .event__detail {
+        margin-left: 0px;
+        border-bottom: solid 1px #4F260B;
+    }
+
+    /* access */
+    .access {
+        padding: 0;
+    }
+
+    .access__ttl {
+        width: 33%;
+        margin-bottom: 10px;
+    }
+
+    /* ----------------
+    フッター
+    --------------------*/
+    .footer {
+        padding: 40px 20px;
+    }
+
+    .footer__wrap {
+        display: block;
+        margin-bottom: 42px;
+    }
+
+    .footer__item {
+        font-size: 18px;
+        line-height: 1.72;
+    }
+
+
+    /* ページのトップに戻るボタン */
+    .pageTop {
+        width: 100px;
+        bottom: 5px;
+        right: 5px;
+    }
 }
