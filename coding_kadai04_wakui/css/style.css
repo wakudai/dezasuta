@@ -193,6 +193,7 @@ main {
 }
 
 .menu__imgBox img {
+    width: 100%;
     border-radius: 0 40px 0 0;
 }
 
@@ -237,9 +238,13 @@ main {
 }
 
 .event__list {
-    padding: 40px 100px;
+    display: flex;
+    justify-content: center;
     background-color: #fff;
     border: solid 3.6px #4F260B;
+}
+.event__list ul {
+    padding: 40px;
 }
 
 .event__item {
@@ -252,8 +257,8 @@ main {
 }
 
 .event__detail {
-    margin-left: 55px;
-    border-bottom: solid 1px #4F260B;
+    margin-left: 50px;
+    text-decoration: underline;
 }
 
 /* ACCESS */
@@ -309,7 +314,6 @@ main {
 /* ページのトップに戻るボタン */
 .pageTop {
     position: fixed;
-    z-index: 9999;
     bottom: 40px;
     right: 40px;
     width: 125px;
@@ -320,13 +324,22 @@ main {
 }
 
 
-@media screen and (max-width: 1100px) {
+@media screen and (min-width:768px) and (max-width: 1100px) {
+
     .spOnly {
-        display: block;
+        display: none;
     }
 
-    .pcOnly {
-        display: none;
+        /* ----------------
+    ヘッダー
+    --------------------*/
+
+    .header__slider source {
+        width: 100%;
+    }
+
+    .header__logo {
+        width: 27%;
     }
 
     .header__pc-nav {
@@ -416,35 +429,139 @@ main {
         font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
     }
 
+    /* キャッチ */
+
+    .catch {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .catch__copy {
+        font-size: 70px;
+    }
+
+    .catch__body {
+        font-size: 22px;
+    }
+
     /* About us */
+
     .about__ttl {
-        width: 25%;
-        margin: 0 auto 12px auto;
+        margin-bottom: 25px;
     }
 
-    .about__img {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 35px;
-    }
-
-    .about__img img {
-        border-radius: 0;
-        width: 100%;
-    }
-
-    .about__text {
-        line-height: 1.75;
+    .about__catch {
+        font-size: 40px;
     }
 }
 
 @media screen and (max-width: 767px) {
+
+    .spOnly {
+        display: block;
+    }
+
+    .pcOnly {
+        display: none;
+    }
+
     /* ----------------
     ヘッダー
     --------------------*/
 
+    .header__slider img {
+        width: 100%;
+    }
+
     .header__logo {
         width: 55%;
+    }
+
+    .header__pc-nav {
+        display: none;
+    }
+
+    /* ハンバーガー */
+    .header__sp-btn {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        height: 23px;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .header__sp-btn span {
+        display: block;
+        position: relative;
+        top: 10px;
+        width: 33px;
+        height: 3px;
+        border-radius: 2px;
+        background: #fff;
+        transition: 0.3s;
+    }
+
+    .header__sp-btn span::before,
+    .header__sp-btn span::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 33px;
+        height: 3px;
+        border-radius: 2px;
+        background: #fff;
+        transition: 0.3s;
+    }
+
+    .header__sp-btn span::before {
+        bottom: 10px;
+    }
+
+    .header__sp-btn span::after {
+        top: 10px;
+    }
+
+    /* ハンバーガを閉じる */
+    .header__sp-btn.open span {
+        background: transparent;
+    }
+
+    .header__sp-btn.open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+
+    .header__sp-btn.open span::after {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    /* ハンバーガーメニュー */
+    .header__sp-nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+    }
+
+    .header__sp-nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .header__sp-nav ul li {
+        padding: 20px 0;
+        color: #fff;
+        font-size: 18px;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
     }
 
 
@@ -482,6 +599,14 @@ main {
         padding: 0 0 50px 0;
     }
 
+    .about__wrap {
+        display: block;
+    }
+
+    .about__textBox {
+        width: 100%;
+    }
+
     .about__ttl {
         width: 43%;
         margin: 0 auto 10px auto;
@@ -494,6 +619,7 @@ main {
 
     .about__img img {
         border-radius: 0;
+        width: 100%;
     }
 
     .about__catch,
@@ -561,9 +687,12 @@ main {
     }
 
     .event__list {
+        display: block;
         margin: 0 18px;
-        padding: 20px 0 20px 28px;
     }
+    .event__list ul {
+        padding: 20px 28px;
+    } 
 
     .event__item {
         font-size: 16px;
@@ -576,12 +705,20 @@ main {
 
     .event__detail {
         margin-left: 0px;
-        border-bottom: solid 1px #4F260B;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 
     /* access */
     .access {
         padding: 0;
+    }
+
+    .access iframe {
+        height: 190px;
     }
 
     .access__ttl {
@@ -601,6 +738,10 @@ main {
         margin-bottom: 42px;
     }
 
+    .footer__logo {
+        margin-bottom: 20px;
+    }
+
     .footer__item {
         font-size: 18px;
         line-height: 1.72;
@@ -611,6 +752,6 @@ main {
     .pageTop {
         width: 100px;
         bottom: 5px;
-        right: 5px;
+        right: 15px;
     }
 }
