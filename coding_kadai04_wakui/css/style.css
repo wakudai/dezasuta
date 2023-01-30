@@ -44,6 +44,84 @@ img {
     border: none;
 }
 
+/* スライダー調整 */
+.slick-dots {
+    bottom: 20px;
+}
+
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before {
+    color: #fff;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+.slick-arrow {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 0;
+    width: 20px;
+    height: 38px;
+    color: transparent;
+    z-index: 1;
+    transition: opacity 0.5s;
+    z-index: 1;
+}
+
+  /* 共通設定 */
+
+.slick-next::before,
+.slick-next::after,
+.slick-prev::before,
+.slick-prev::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    bottom: 0;
+    margin: auto;
+    content: "";
+    vertical-align: middle;
+}
+
+.slick-next::after,
+.slick-prev::after {
+    width: 26px;
+    height: 26px;
+    border-top: 5px solid #fff;
+    border-right: 5px solid #fff;
+}
+
+  /* next */
+
+.slick-next {
+    right: 60px;
+}
+
+.slick-next::after {
+    transform: rotate(45deg);
+}
+
+  /* prev */
+
+.slick-prev {
+    left: 30px;
+}
+
+.slick-prev::after {
+    transform: rotate(-135deg);
+}
+
+/* light box */
+.lb-data .lb-number {
+    display: none;
+}
+
 
 /* ----------------
 ヘッダー
@@ -221,8 +299,12 @@ main {
     margin: 0 auto 20px;
 }
 
-.gallery__wrap {
+.gallery__slider {
     display: flex;
+}
+
+.gallery__img img {
+    width: 100%;
 }
 
 
@@ -328,7 +410,7 @@ main {
         display: none;
     }
 
-        /* ----------------
+    /* ----------------
     ヘッダー
     --------------------*/
 
@@ -461,6 +543,28 @@ main {
 
     .pcOnly {
         display: none;
+    }
+
+    /* スライダー調整 */
+
+    .slick-next::after,
+    .slick-prev::after {
+        width: 20px;
+        height: 20px;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+    }
+
+    .slick-next {
+        right: 36px;
+    }
+
+    .slick-prev {
+        left: 18px;
+    }
+
+    .slick-next::after {
+        right: 2px;
     }
 
     /* ----------------
