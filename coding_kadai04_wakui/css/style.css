@@ -59,18 +59,10 @@ img {
 }
 
 .slick-arrow {
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    padding: 0;
-    width: 20px;
-    height: 38px;
-    color: transparent;
+    width: 50px;
+    height: 50px;
     z-index: 1;
     transition: opacity 0.5s;
-    z-index: 1;
 }
 
   /* 共通設定 */
@@ -83,10 +75,7 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    bottom: 0;
-    margin: auto;
     content: "";
-    vertical-align: middle;
 }
 
 .slick-next::after,
@@ -100,11 +89,11 @@ img {
   /* next */
 
 .slick-next {
-    right: 60px;
+    right: 30px;
 }
 
 .slick-next::after {
-    transform: rotate(45deg);
+    transform: translate(-50%,-50%) rotate(45deg);
 }
 
   /* prev */
@@ -114,12 +103,12 @@ img {
 }
 
 .slick-prev::after {
-    transform: rotate(-135deg);
+    transform: translate(-50%,-50%) rotate(-135deg);
 }
 
 /* light box */
 .lb-data .lb-number {
-    display: none;
+    display: none !important;
 }
 
 
@@ -556,7 +545,7 @@ main {
     }
 
     .slick-next {
-        right: 36px;
+        right: 18px;
     }
 
     .slick-prev {
